@@ -29,7 +29,7 @@ function draw(e) {
   hue += 1;
   if (hue >= 360) hue = 0;
   if (ctx.lineWidth >= 100 || ctx.lineWidth <= 1) direction = !direction;
-  ctx.lineWidth = direction ? ctx.lineWidth  += 1 : ctx.lineWidth -= 1;
+  ctx.lineWidth = direction ? ctx.lineWidth += 1 : ctx.lineWidth -= 1;
 }
 
 canvas.addEventListener('mousedown', (e) => {
