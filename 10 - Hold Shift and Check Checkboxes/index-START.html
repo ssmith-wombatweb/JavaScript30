@@ -24,6 +24,11 @@
       display:flex;
       align-items:center;
       border-bottom: 1px solid #F1F1F1;
+      transition: background 0.5s;
+    }
+
+    .item.selected {
+      background-color: lightblue;
     }
 
     .item:last-child {
@@ -32,7 +37,7 @@
 
 
     input:checked + p {
-      background:#F9F9F9;
+      background:rgba(218, 218, 218, 0.5);
       text-decoration: line-through;
     }
 
@@ -43,7 +48,7 @@
     p {
       margin:0;
       padding:20px;
-      transition:background 0.2s;
+      transition:background 0.5s;
       flex:1;
       font-family:'helvetica neue';
       font-size: 20px;
@@ -98,7 +103,7 @@
     </div>
   </div>
 
-<script>
+<script type="text/javascript" src="./index.js">
 </script>
 </body>
 </html>
