@@ -31,11 +31,19 @@ body {
 .player:fullscreen {
   max-width: none;
   width: 100%;
+  border: none;
+  height: 100%;
+  background: black;
+  display: flex;
 }
 
 .player:-webkit-full-screen {
   max-width: none;
   width: 100%;
+  border: none;
+  height: 100%;
+  background: black;
+  display: flex;
 }
 
 .player__video {
@@ -56,6 +64,11 @@ body {
 
 .player__button:focus {
   border-color: #ffc600;
+}
+
+.player__button.fullscreen span {
+  height: 50%;
+  display: block
 }
 
 .player__slider {
@@ -101,7 +114,7 @@ body {
   width:50%;
   background:#ffc600;
   flex:0;
-  flex-basis:50%;
+  flex-basis:0%;
 }
 
 /* unholy css to style input type="range" */
