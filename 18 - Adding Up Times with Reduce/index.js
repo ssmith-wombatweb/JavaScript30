@@ -1,15 +1,15 @@
-const videoEls = [...document.getElementsByClassName('videos')[0].children];
+const videoEls = [...document.querySelectorAll('.videos > [data-time]')];
 
 function getMinSec(time) {
-  const timeArr = time.split(':');
+  const [min, sec] = time.split(':').map(parseFloat);
   return {
-    min: parseFloat(timeArr[0]),
-    sec: parseFloat(timeArr[1]),
+    min,
+    sec,
   };
 }
 
-function calcTimes(elements) {
-  return elements.reduce((timeTotal, element) => {
+function addTimes(elements) {
+  const totalTime = elements.reduce((timeTotal, element) => {
     const newTimeArr = getMinSec(element.dataset.time);
 
     const seconds = newTimeArr.sec + timeTotal.sec;
@@ -26,7 +26,9 @@ function calcTimes(elements) {
     min: 0,
     sec: 0,
   });
+
+  return totalTime;
 }
 
-const time = calcTimes(videoEls);
+const time = addTimes(videoEls);
 console.log(time);
