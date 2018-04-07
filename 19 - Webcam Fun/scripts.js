@@ -74,9 +74,9 @@ function paintToCanvas() {
     // pixels = rgbSplit(pixels);
     // ctx.globalAlpha = 0.1;
 
-    pixels = greenScreen(pixels);
+    // pixels = greenScreen(pixels);
     ctx.putImageData(pixels, 0, 0);
-  }, 50);
+  }, 16);
 }
 
 function takePhoto() {
