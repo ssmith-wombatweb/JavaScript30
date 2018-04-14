@@ -2,7 +2,6 @@ const speed = document.querySelector('.speed');
 const bar = document.querySelector('.speed-bar');
 const video = document.querySelector('.flex');
 let mouseDown = false;
-const barHeight = bar.offsetHeight;
 
 function updateSpeed(e) {
   if (!mouseDown) return;
